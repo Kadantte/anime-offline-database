@@ -15,6 +15,8 @@ Websites which provide information about anime such as `myanimelist.net`, `notif
 ## Can you please add additional data/properties?
 No. The dataset has been created for my own tool. It contains all data/properties that I need and I won't add more data/properties. This is merely an index. The idea is to visit the meta data provider of your choice to get additional information about the anime.
 
+Out of curiosity I created an extension project "[modb-extension ](https://github.com/manami-project/modb-extension)" which can be seen as an experimental demonstration on how to extend the current dataset. It currently contains **synopsis** and **scores**.
+
 ## Can you please add an additional meta data provider?
 No. I don't plan to add any additional meta data provider.
 
@@ -29,13 +31,13 @@ If you query this dataset based on titles/synonyms it might seem that there are 
 A duplicate by defintion of this dataset is an entry which contains multiple links of the same meta data provider in `sources`.
 
 ## Why are there no IDs?
-There are. The entries under `sources` are the IDs. Each one of the array's URLs is a key for that specific entry.
+There are. The entries under `sources` are the IDs. Each of the arrays URLs is a key for that specific entry.
 
 ## Is this dataset created automatically or manually?
 It is created automatically and reviewed in a half-automated process.
 
 ## Do you plan to open source the code which creates this dataset?
-Yes. Parts of the code are already [available](https://github.com/manami-project?tab=repositories&q=modb&type=source). However there is still work to do before I can/want to open source the rest and that doesn't have any priority right now.
+The code is [available](https://github.com/manami-project?tab=repositories&q=modb&type=source).
 
 ## How do you split entries?
 Entries are split if one meta data provider lists multiple entries as one and others don't.
@@ -46,7 +48,7 @@ Entries are split if one meta data provider lists multiple entries as one and ot
 However if one entry is listed with 13 episodes whereas the other is listed with 12, because it doesn't count the recap episode then these entries are still merged together.
 
 ## Does this dataset contain all anime from the supported meta data providers?
-No. MAL and anisearch are the only providers which list adult titles publicly. So this type of anime is missing for the other meta data providers.
+No. Myanimelist, anisearch and animenewsnetwork are the only providers which list adult titles publicly. So this type of anime is missing for the other meta data providers.
 It's possible to retrieve adult titles from anilist, but because they cannot be accessed without an account in the browser those are not fit for the review process. That's why entries from anilist marked as adult are missing as well.
 If there are new entries which have been created after an update then those obviously won't appear until the next update.
 Apart from that it should contain all titles from the supported meta data providers.
